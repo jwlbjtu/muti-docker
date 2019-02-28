@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t jwlbjtu/react-test -f ./client/Dockerfile.dev ./client
 
-scripts:
+script:
   - docker run jwlbjtu/react-test npm test -- --coverage
 
 after_success:
